@@ -94,4 +94,4 @@ spec:
          - exposedPort: 8090
          - exposedPort: 2000
          - exposedPort: 30001
-     memoryLimit: "2Gi"
+     memoryLimit: "2.2Gi"
