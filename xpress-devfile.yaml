@@ -10,7 +10,7 @@ components:
       https://raw.githubusercontent.com/mplab-xpresside/devfiles/master/meta-mplab-xpresside.yaml
   - alias: mcc
     type: dockerimage
-    image: 453345707098.dkr.ecr.us-west-2.amazonaws.com/xpress/prod/mcc-v1.0.2:latest
+    image: 453345707098.dkr.ecr.us-west-2.amazonaws.com/xpress/prod/mcc-v5.1.0:latest
     volumes:
       - name: xpressprojects
         containerPath: /home/projects
@@ -25,4 +25,5 @@ components:
         attributes:
            protocol: ws
            secure: 'false'
-    memoryLimit: "0.6Gi"
+    memoryLimit: "2.5Gi"
+    memoryRequest: "1Gi"
