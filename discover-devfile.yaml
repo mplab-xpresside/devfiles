@@ -13,6 +13,9 @@ components:
   - type: cheEditor
     reference: >-
       https://raw.githubusercontent.com/mplab-xpresside/devfiles/master/meta-mplab-xpresside.yaml
+  - type: chePlugin
+    reference: >-
+      https://raw.githubusercontent.com/mplab-xpresside/devfiles/master/meta-xpress-rest.yaml
   - alias: mcc
     type: dockerimage
     image: 453345707098.dkr.ecr.us-west-2.amazonaws.com/xpress/prod/mcc:v5.1.17
@@ -30,4 +33,5 @@ components:
         attributes:
            protocol: ws
            secure: 'false'
-    memoryLimit: "0.6Gi"
+    memoryLimit: "1Gi"
+    memoryRequest: "256Mi"
