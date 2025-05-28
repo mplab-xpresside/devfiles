@@ -19,16 +19,17 @@ components:
           name: xpressprojects
       mountSources: true
       endpoints:
+      attributes:
         - exposure: public
-          name: xpress
-          secure: true
-          protocol: http
+          name: xpress          
+          protocol: https            
+          secure: false
           public: true
           targetPort: 3000
           attributes:
-            protocol: http            
-            secure: true
+            type: main
             cookiesAuthEnabled: true
+            urlRewriteSupported: true
             discoverable: false
         - name: "theia-dev"
           public: true
