@@ -47,19 +47,19 @@ components:
             protocol: http
             type: ide-dev
             discoverable: false
-       -  name: "theia-redirect-1"
+        - name: "theia-redirect-1"
           public: true
           targetPort: 13131
           attributes:
             protocol: http
             discoverable: false
-       -  name: "theia-redirect-2"
+        - name: "theia-redirect-2"
           public: true
           targetPort: 13132
           attributes:
             protocol: http
             discoverable: false
-       -  name: "theia-redirect-3"
+        - name: "theia-redirect-3"
           public: true
           targetPort: 13133
           attributes:
