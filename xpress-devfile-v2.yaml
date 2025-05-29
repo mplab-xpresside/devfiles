@@ -12,6 +12,8 @@ components:
           value: 0.0.0.0
         - name: HOSTED_PLUGIN_PORT
           value: "3130"
+        - name: KUBEDOCK_ENABLED
+          value: "true"
       volumes:
         - mountPath: "/plugins"
           name: plugins
