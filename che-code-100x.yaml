@@ -21,7 +21,7 @@ components:
       cpuLimit: 3500m
       env:
         - name: KUBEDOCK_ENABLED
-          value: 'false'
+          value: 'true'
       endpoints:
         - exposure: public
           name: dev
