@@ -14,14 +14,14 @@ components:
 
   - name: dev
     container:
-      image: quay.io/che-incubator/che-code-dev:lastest
+      image: quay.io/che-incubator/che-code-dev:insider
       memoryLimit: 12Gi
       memoryRequest: 512Mi
       cpuRequest: 500m
       cpuLimit: 3500m
-      # env:
-      #   - name: KUBEDOCK_ENABLED
-      #     value: 'false'
+      env:
+        - name: KUBEDOCK_ENABLED
+          value: 'false'
       endpoints:
         - exposure: public
           name: dev
