@@ -19,9 +19,9 @@ components:
       memoryRequest: 512Mi
       cpuRequest: 500m
       cpuLimit: 3500m
-      env:
-        - name: KUBEDOCK_ENABLED
-          value: 'false'
+      # env:
+      #   - name: KUBEDOCK_ENABLED
+      #     value: 'false'
       endpoints:
         - exposure: public
           name: dev
