@@ -28,6 +28,50 @@ components:
           secure: true
           protocol: http
           targetPort: 8000
+  
+  # This is special runtime container. It contains node js module for creating endpoints.
+  - name: che-code-runtime-description
+    container:
+      image: quay.io/devfile/universal-developer-image@sha256:af179305a39c56b11c8851e67a64e7f4e5e269572e05a8de9e62834f9927c31d
+      memoryLimit: 1024Mi
+      memoryRequest: 256Mi
+      cpuLimit: 500m
+      cpuRequest: 30m
+      volumeMounts:
+        - name: checode
+          path: /checode
+      endpoints:
+        - name: che-code
+          attributes:
+            type: main
+            cookiesAuthEnabled: true
+            discoverable: false
+            urlRewriteSupported: true
+          targetPort: 3100
+          exposure: public
+          secure: true
+          protocol: https
+        - name: code-redirect-1
+          targetPort: 13131
+          exposure: public
+          protocol: https
+          attributes:
+            discoverable: false
+            urlRewriteSupported: false
+        - name: code-redirect-2
+          targetPort: 13132
+          exposure: public
+          protocol: https
+          attributes:
+            discoverable: false
+            urlRewriteSupported: false
+        - name: code-redirect-3
+          targetPort: 13133
+          exposure: public
+          protocol: https
+          attributes:
+            discoverable: false
+            urlRewriteSupported: false
 
   - name: projects
     volume:
