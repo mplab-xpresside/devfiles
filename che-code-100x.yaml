@@ -76,6 +76,9 @@ components:
   - name: projects
     volume:
       size: 10Gi
+    # We define volume here. It will be created according the annotations
+  - name: checode
+    volume: {}
 
 commands:
   - id: npm-install
