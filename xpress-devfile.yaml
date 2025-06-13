@@ -9,6 +9,7 @@ components:
     reference: >-
       https://raw.githubusercontent.com/mplab-xpresside/devfiles/refs/heads/master/meta-mplab-xpresside.yaml
   - type: chePlugin
+    alias: my-rest-plugin
     reference: >-
       https://raw.githubusercontent.com/mplab-xpresside/devfiles/refs/heads/master/meta-xpress-rest.yaml
   - alias: mcc
@@ -30,3 +31,15 @@ components:
            secure: 'false'
     memoryLimit: "2Gi"
     memoryRequest: "512Mi"
+commands:
+  - name: >
+      xclm: license server activation
+    actions:
+      - type: exec
+        component: my-rest-plugin
+        command: >
+          /opt/microchip/xc8/v3.00/bin/xclm -netfile 5053 licenses.microchip.com && 
+          /opt/microchip/xc16/v2.10/bin/xclm -netfile 5053 licenses.microchip.com && 
+          /opt/microchip/xc-dsc/v3.21/bin/xclm -netfile 5053 licenses.microchip.com && 
+          /opt/microchip/xc32/v4.60/bin/xclm -netfile 5053 licenses.microchip.com
+        
