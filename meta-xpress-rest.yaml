@@ -28,14 +28,6 @@ spec:
      env:
      - name: _JAVA_OPTIONS
        value: "-Xmx1280m"
-     command: ["/bin/sh", "-c"]
-     args:
-       - echo starting license activation;
-         /opt/microchip/xc8/v3.00/bin/xclm -netfile 5053 licenses.microchip.com; 
-         /opt/microchip/xc16/v2.10/bin/xclm -netfile 5053 licenses.microchip.com; 
-         /opt/microchip/xc-dsc/v3.21/bin/xclm -netfile 5053 licenses.microchip.com; 
-         /opt/microchip/xc32/v4.60/bin/xclm -netfile 5053 licenses.microchip.com;
-         echo done license activation;
      ports:
        - exposedPort: 8080
      memoryLimit: "2.5Gi"
